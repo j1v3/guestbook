@@ -12,17 +12,17 @@ runtime:
         - iconv
         
 
-variables:
-    php:
-        # uncomment on PHP 7.4+
-        opcache.preload: /app/config/preload.php
+# variables:
+#     php:
+#         # uncomment on PHP 7.4+
+#         opcache.preload: /app/config/preload.php
 
 build:
     flavor: none
 
 relationships:
     database: "db:postgresql"
-    
+
 web:
     locations:
         "/":
