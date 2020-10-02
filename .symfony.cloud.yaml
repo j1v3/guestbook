@@ -10,18 +10,17 @@ runtime:
         - sodium
         - ctype
         - iconv
-        
-
-# variables:
-#     php:
-#         # uncomment on PHP 7.4+
-#         opcache.preload: /app/config/preload.php
 
 build:
     flavor: none
 
+varaibles:
+    php-ext:
+        redis: 5.3.1
+
 relationships:
     database: "db:postgresql"
+    redis: redis:cache
 
 web:
     locations:
