@@ -29,3 +29,8 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\EntiyListener\ConferenceEntityListener:
+        tags:
+            - { name: 'doctrine.orm.entitylistener', event: 'preUpdate', entity: 'App\Entitiy\Conference' } 
+            - { name: 'doctrine.orm.entitylistener', event: 'prePersist', entity: 'App\Entitiy\Conference' } 
