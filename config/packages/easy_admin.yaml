@@ -10,7 +10,23 @@ easy_admin:
     entities:
         Conference:
             class: App\Entity\Conference
-
+            # list:
+            #     fields:
+            #         - city
+            #         - year
+            #         - { property: 'isInternational', type: 'boolean' }
+            #         - { property: 'comments', type: 'text' }
+            edit:
+                fields:
+                    - city
+                    - year
+                    - isInternational
+            new:
+                fields:
+                    - city
+                    - year
+                    - isInternational
+                    
         Comment:
             class: App\Entity\Comment
             list:

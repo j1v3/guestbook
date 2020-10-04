@@ -34,5 +34,5 @@ services:
 
     App\EntiyListener\ConferenceEntityListener:
         tags:
-            - { name: 'doctrine.orm.entitylistener', event: 'preUpdate', entity: 'App\Entitiy\Conference' } 
             - { name: 'doctrine.orm.entitylistener', event: 'prePersist', entity: 'App\Entitiy\Conference' } 
+            - { name: 'doctrine.orm.entitylistener', event: 'preUpdate', entity: 'App\Entitiy\Conference' } 
